@@ -1,7 +1,10 @@
-
-header{
-  
-  height: 50px;
+body{
+  background-color: white;
+  color: black;
+}
+.mydark{
+  background-color: black;
+  color: white;
 }
 .zlogo{
   display: inline-block;

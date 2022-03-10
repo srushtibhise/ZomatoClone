@@ -6,23 +6,37 @@
     <link rel="stylesheet" href="./home.css"> 
     <link rel="icon" href="./Images/homepageimg.png"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <script>
+        function changeMode(){
+            var mybody = document.body;
+            mybody.classList.toggle('mydark')
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="zlogo">
-            <img src="./Images/logo.png" rel="logo">
-        </div>
 
-        <div style="float: right;">
-            <div class="login">Login</div>
-            <div class="account">Create an account</div>
-        </div>   
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Zomato</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Login</a>
+                  <a class="nav-link" href="#">Create Account</a>
+                  <button onClick="changeMode()" style="border-radius: 32%;">Light/Dark Mode</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+      
 
-</header>
     
-    <img src="./Images/homepageimg.jpg" width=100% height=450>
+   <img src="./Images/homepageimg.jpg" width=100% height=450>
     <div>
         
         <div class="logo">
