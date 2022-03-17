@@ -6,6 +6,7 @@ body{
   background-color: black;
   color: white;
 }
+
 .zlogo{
   display: inline-block;
   width: 52px;
@@ -161,6 +162,18 @@ body{
 .card:hover{
   transform: scale(1.1);
 }
+#coupon{
+  height: 295px;
+  width: 393px;
+  background-color: white;
+  position:absolute;
+  z-index: 100;
+  margin: auto;
+  background-image: url(./Images/zomato.jpg);
+  visibility: hidden;
+}
+
+
 
 @media only screen and (max-width: 600px) {
   .restaurantsinput {
