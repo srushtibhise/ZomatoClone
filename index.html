@@ -1,122 +1,117 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Home</title> 
-    <link rel="stylesheet" href="./home.css"> 
-    <link rel="icon" href="./Images/homepageimg.png"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
         function changeMode(){
             var mybody = document.body;
             mybody.classList.toggle('mydark')
         }
     </script>
-    <script href="home.js"></script>
+    <script src="home.js"></script>
+    <title>Zomato_demo</title>
 </head>
-
 <body>
-   
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Zomato</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#">Login</a>
-                  <a class="nav-link" href="#">Create Account</a>
-                  <button onClick="changeMode()" style="border-radius: 32%;">Light/ Dark Mode</button>
-                </div>
-              </div>
-            </div>
-          </nav>
-        
-              <div id="coupon">
-                  <button onclick="closeCoupon()">&times;</button>
-              </div>
-              <script>
-                   window.onload=loadCoupon()
-              </script>
-
-         
-   <img src="./Images/homepageimg.jpg" width=100% height=450>
-    <div>
-        
+    <!--Header section-->
+    <div style="height: 80px; width: 100%;  background-color: #e23744;">
+        <div style=" height: 61px; width: 239px; margin-left: 16px;   margin-top: 6px; position: absolute;">
+            <img src="./Images/logo.png" height="60px" width="230px">
+        </div>
+        <div style="height: 60px; width: 301px;  margin-left: 410px; margin-top: 6px; float: left;">
+            <form class="d-flex" style="margin-top: 5px;">
+                <input class="form-control me-2" type="search" placeholder="Search the best food" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+        </div>
+        <div style="height: 71px;width: 416px; margin-top: 5px;  margin-left: 1112px;">
+            <button type="button" 
+                class="btn btn-outline-light" style="margin-top: 8px;">
+            Login
+        </button>
+        <button type="button" 
+                class="btn btn-outline-light" style="margin-top: 8px;">
+         Create Account
+        </button>
+        <button type="button" 
+                class="btn btn-outline-dark" style="margin-top: 8px;" onClick="changeMode()">
+            Dark mode
+        </button>
+        <button type="button" 
+                class="btn btn-outline-success" style="margin-top: 8px;" onclick="geolocation()">
+           Location
+           
+        </button>
+       
+        </div>
+    </div>
+    <!--search section-->
+    <div class="searchbox">
+     
         <div class="logo">
             <p>Z!</p>
         </div>
        
-        <div class="headings">
-            Discover the best food!
-        </div>
-      
-        
-        <div class="locationSelector">
-          
-                
-
-
-           
-            <select class="locationDropdown">
-                <option value="0" selected disabled>Select</option>
-                <option value="1">Pune</option>
-                <option value="1">Mumbai</option>
-                <option value="1">Gujrat</option>
-                <option value="1">Punjab</option>
-            </select> 
-           <div>
-                <input class="restaurantsinput" type="text" placeholder="Please Enter Restaurant Name" />
-                <span class="glyphicon glyphicon-search search"></span>
-            
-            </div>
-            
-        </div>
-        
-
-        </div>
-   
-
-    <div class="quicksearch">
-        <div class="container">
-            <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
-                    <img src="./Images/orderfood.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">order food online</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
-                    <img src="./Images/dinner.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary" style="text-align: center;">Dinner</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
-                    <img src="./Images/nightlife.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Nightlife</a>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-           
-        
-            <footer style="text-align: center; color: red; font-size: 20px;">
-                &copy; Srushti Bhise &hearts;
+     <div class="locationSelect">
+         <select class="locationDropDown">
+             <option value="0" selected disabled>Select</option>
+             <option value="1">Pune</option>
+             <option value="1">Mumbaiption>
+             <option value="1">Punjab</option>
+             <option value="1">Gujrat</option>
+         </select>
+         <input class="restaurantsinput" type="text" placeholder="Please enter restaurant name">
+         <span class="glyphicon glyphicon-search search"></span>
+     </div>
     
-            </footer>  
-
-          
+        
+        
+    <div id="coupon" style="   margin-left: 561px; margin-top: 317px; background-image: url(./Images/zomato.jpg); background-size: cover; background-repeat: no-repeat;">
+        
+        <button onclick="closeCoupon()">&times;</button>
+       
     </div>
-</body>
+<script>
+    window.onload=loadCoupon()
+</script>
 
+<div class="quicksearch">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
+                <img src="./Images/orderfood.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">order food online</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
+                <img src="./Images/dinner.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary" style="text-align: center;">Dinner</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="margin-left: 5%; box-shadow: 18px -3px 12px gray;">
+                <img src="./Images/nightlife.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Nightlife</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <footer style="text-align: center; color: red; font-size: 20px;">
+            &copy; Srushti Bhise &hearts;
+
+        </footer> 
+       
+</body>
 </html>
